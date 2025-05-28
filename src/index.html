@@ -4,39 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking Tailwind Css File -->
     <link href="./output.css" rel="stylesheet">
+    <!-- Linking JavaScript File (Defered Loading) -->
     <script src="./script.js" defer></script>
 </head>
 
 <body class="font-serif italic font-bold text-3xl ">
-    <header class="text-center font-serif italic text-5xl font-bold p-5">
+    <!-- Header -->
+    <header class="text-center  font-serif italic text-5xl font-bold p-5">
+        <!-- Heading of Application -->
         <h1>Weather Forecast</h1>
     </header>
-    <section class="flex gap-20 items-start px-10 flex-wrap lg:flex-nowrap">
+    <!-- Main Section  -->
+    <section class="flex gap-20 flex-wrap lg:flex-nowrap">
         <div class="max-w-155 text-center text-white mt-10 ml-10 rounded-xl p-6 bg-purple-700">
             <div class="flex w-full justify-between items-center ">
+                <!-- Search Box  -->
                 <input class="search-box bg-purple-100 text-slate-600 text-lg mr-4 rounded-full h-15 p-8" type="text"
                     placeholder="Enter City Name" spellcheck="false">
+                <!-- Search Button -->
                 <button class="search-btn  rounded-full w-15  cursor-pointer bg-purple-100 p-2"><img class="w-11"
                         src="../images/search.png" alt="search icon"></button>
                 <span class="m-3">Or</span>
+                <!-- Geolocation Button -->
                 <button class="live-location rounded-full w-15  cursor-pointer bg-purple-100 p-2"><img class="w-11"
                         src="../images/location.png" alt="live location"></button>
 
             </div>
+            <div class="recent-searches  mt-4">
+                <!-- Recent Searches Dropdown -->
+                <select class="search-history hidden bg-purple-100 text-slate-600 text-lg rounded-full p-2">
+                    <option selected disabled>Recent Searches</option>
+                </select>
+            </div>
+            <!-- Error message paragraph -->
             <div class="error-msg pt-1 hidden">
                 <p>Invalid City Name</p>
             </div>
             <div class="weather hidden">
+                <!-- Weather Icon -->
                 <img class="weather-image size-55 ml-33 p-5 " src="../images/sun.png" alt="sun" class="weather-icon">
+                <!-- Temperature And City  -->
                 <h1 class="temp">40°C</h1>
                 <h2 class="city">Delhi</h2>
                 <div class="detail flex items-center justify-between ">
+                    <!-- Humidity icon and Value -->
                     <div>
                         <img class="size-15 ml-10" src="../images/humidity.png" alt="humidity">
                         <p class="humidity">50%</p>
                         <p class="text-2xl">Humidity</p>
                     </div>
+                    <!-- Wind icon and value -->
                     <div>
                         <img class="size-15 ml-13" src="../images/wind-speed.png" alt="wind">
                         <p class="wind">45Km/h</p>
@@ -45,21 +64,17 @@
                 </div>
             </div>
         </div>
+        <!-- Forecast div starts -->
         <div class="flex flex-col">
             <div class="forecast-heading  text-2xl font-semibold mt-5 hidden">
+                <!-- Heading injected for forecast -->
                 <h1></h1>
             </div>
-            <div class="forecast grid grid-cols-1 lg:grid-cols-5 gap-3 p-4 mt-5 text-center text-white hidden">
-
+            <div class="forecast grid lg:grid-cols-5 gap-3 p-4 mt-5 text-center text-white hidden">
+                <!-- Dynamic Forecast card injected  -->
             </div>
         </div>
-
-
-
-
     </section>
-
-
 </body>
 
 </html>
