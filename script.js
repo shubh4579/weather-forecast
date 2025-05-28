@@ -100,13 +100,13 @@ const createWeatherCard = (weatherItem) => {
                 )}°C</h1>
 
                 <div class="flex items-center gap-2 mb-1">
-                    <img src="../images/humidity.png" alt="humidity" class="w-5 h-5">
+                    <img src="./images/humidity.png" alt="humidity" class="w-5 h-5">
                     <p class="text-sm ">${weatherItem.main.humidity}%</p>
                 </div>
                 <p class="text-xs  mb-2">Humidity</p>
 
                 <div class="flex items-center gap-2 mb-1">
-                    <img src="../images/wind-speed.png" alt="wind" class="w-5 h-5">
+                    <img src="./images/wind-speed.png" alt="wind" class="w-5 h-5">
                     <p class="text-sm ">${weatherItem.wind.speed} Km/h</p>
                 </div>
                 <p class="text-xs ">Wind Speed</p>
@@ -138,27 +138,27 @@ async function getForecast(city) {
 function getWeatherImage(weatherMain) {
   switch (weatherMain) {
     case "Clear":
-      return "../images/sun.png";
+      return "./images/sun.png";
     case "Clouds":
-      return "../images/cloudy.png";
+      return "./images/cloudy.png";
     case "Rain":
-      return "../images/rain.png";
+      return "./images/rain.png";
     case "Drizzle":
-      return "../images/lighting.png";
+      return "./images/lighting.png";
     case "Thunderstorm":
-      return "../images/thunderstorm.png";
+      return "./images/thunderstorm.png";
     case "Snow":
-      return "../images/snow.png";
+      return "./images/snow.png";
     case "Mist":
     case "Haze":
     case "Fog":
-      return "../images/foggy.png";
+      return "./images/foggy.png";
     case "Dust":
     case "Sand":
     case "Ash":
-      return "../images/dust.png";
+      return "./images/dust.png";
     default:
-      return "../images/default.png";
+      return "./images/default.png";
   }
 }
 //update ui with api data
