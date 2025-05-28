@@ -201,7 +201,7 @@ document.querySelector(".search-history").addEventListener("change", (e) => {
   }
 });
 //Enable the Enter button functionality
-searchBox.addEventListener("keypress", function (event) {
+searchBox.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     searchBtn.click();
