@@ -12,38 +12,53 @@
     <header class="text-center font-serif italic text-5xl font-bold p-5">
         <h1>Weather Forecast</h1>
     </header>
-    <section class="max-w-140 text-center text-white mt-10 ml-15 rounded-xl p-6 bg-purple-700">
-        <div class="flex w-full justify-between items-center ">
-            <input class="search-box bg-purple-100 text-slate-600 text-lg mr-4 rounded-full h-15 p-8" type="text"
-                placeholder="Enter City Name" spellcheck="false">
-            <button class="search-btn border-0 outline-0 rounded-full w-15  cursor-pointer bg-purple-100 p-2"><img
-                    class="w-11" src="../images/search.png" alt="search icon"></button>
-            <span>Or</span>
-            <button class="live-location border-0 outline-0 rounded-full w-15  cursor-pointer bg-purple-100 p-2"><img
-                    class="w-11" src="../images/location.png" alt="live location"></button>
+    <section class="flex gap-20 items-start px-10 flex-wrap lg:flex-nowrap">
+        <div class="max-w-155 text-center text-white mt-10 ml-10 rounded-xl p-6 bg-purple-700">
+            <div class="flex w-full justify-between items-center ">
+                <input class="search-box bg-purple-100 text-slate-600 text-lg mr-4 rounded-full h-15 p-8" type="text"
+                    placeholder="Enter City Name" spellcheck="false">
+                <button class="search-btn  rounded-full w-15  cursor-pointer bg-purple-100 p-2"><img class="w-11"
+                        src="../images/search.png" alt="search icon"></button>
+                <span class="m-3">Or</span>
+                <button class="live-location rounded-full w-15  cursor-pointer bg-purple-100 p-2"><img class="w-11"
+                        src="../images/location.png" alt="live location"></button>
 
-        </div>
-        <div class="error-msg pt-1 hidden">
-            <p>Invalid City Name</p>
-        </div>
-        <div class="weather hidden">
-            <img class="weather-image size-55 ml-33 p-5 " src="../images/sun.png" alt="sun" class="weather-icon">
-            <h1 class="temp">40°C</h1>
-            <h2 class="city">Delhi</h2>
-            <div class="detail flex items-center justify-between ">
-                <div>
-                    <img class="size-15 ml-10" src="../images/humidity.png" alt="humidity">
-                    <p class="humidity">50%</p>
-                    <p class="text-2xl">Humidity</p>
-                </div>
-                <div>
-                    <img class="size-15 ml-13" src="../images/wind-speed.png" alt="wind">
-                    <p class="wind">45Km/h</p>
-                    <p class="text-2xl">Wind Speed</p>
+            </div>
+            <div class="error-msg pt-1 hidden">
+                <p>Invalid City Name</p>
+            </div>
+            <div class="weather hidden">
+                <img class="weather-image size-55 ml-33 p-5 " src="../images/sun.png" alt="sun" class="weather-icon">
+                <h1 class="temp">40°C</h1>
+                <h2 class="city">Delhi</h2>
+                <div class="detail flex items-center justify-between ">
+                    <div>
+                        <img class="size-15 ml-10" src="../images/humidity.png" alt="humidity">
+                        <p class="humidity">50%</p>
+                        <p class="text-2xl">Humidity</p>
+                    </div>
+                    <div>
+                        <img class="size-15 ml-13" src="../images/wind-speed.png" alt="wind">
+                        <p class="wind">45Km/h</p>
+                        <p class="text-2xl">Wind Speed</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="flex flex-col">
+            <div class="forecast-heading  text-2xl font-semibold mt-5 hidden">
+                <h1></h1>
+            </div>
+            <div class="forecast grid grid-cols-1 lg:grid-cols-5 gap-3 p-4 mt-5 text-center text-white hidden">
+
+            </div>
+        </div>
+
+
+
+
     </section>
+
 
 </body>
 
