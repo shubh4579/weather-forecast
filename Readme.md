@@ -41,7 +41,7 @@ A responsive web application that provides current weather and 5-day forecast de
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/weather-forecast-app.git
+git clone https://github.com/shubh4579/weather-forecast.git
 cd weather-forecast-app
 
 npm run dev  //This command watches changes in src/input.css and compiles them to output.css using Tailwind CLI.
