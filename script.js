@@ -200,5 +200,13 @@ document.querySelector(".search-history").addEventListener("change", (e) => {
     checkWeather(selectedCity);
   }
 });
+//Enable the Enter button functionality
+searchBox.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    searchBtn.click();
+  }
+});
+
 //call dropdown
 SearchDropdown();
